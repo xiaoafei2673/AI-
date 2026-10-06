@@ -1,0 +1,49 @@
+/* 全局样式：科研 Dashboard 风格，浅灰底 + 白卡片 */
+:root {
+  --bg: #f5f7fa;
+  --card-shadow: 0 1px 4px rgba(0, 21, 41, 0.06);
+  --card-shadow-hover: 0 4px 16px rgba(0, 21, 41, 0.1);
+  --header-gradient: linear-gradient(135deg, #1a2a4f 0%, #2456a6 60%, #2f7cf6 100%);
+  --radius: 10px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', Arial, sans-serif;
+  color: #303133;
+}
+
+.card {
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: var(--card-shadow);
+  padding: 20px 24px;
+  transition: box-shadow 0.25s ease;
+}
+
+.card:hover {
+  box-shadow: var(--card-shadow-hover);
+}
+
+.section-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a2a4f;
+  margin: 0 0 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.section-title::before {
+  content: '';
+  width: 4px;
+  height: 16px;
+  border-radius: 2px;
+  background: #2f7cf6;
+}
